@@ -1,0 +1,21 @@
+{
+  "name": "t3p16",
+  "version": "1.0.0",
+  "description": "ExpressJS intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=3000 node src/index.js",
+    "start-mac": "PORT=8000 node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
