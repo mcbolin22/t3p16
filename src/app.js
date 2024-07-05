@@ -3,6 +3,17 @@
 
 const express = require("express");
 const serverInstance = express();
+
+// Raw JSON in body allowed
+serverInstance.use(express.json());
+// Form data in body allowed
+serverInstance.use(express.urlencoded({extended: true}));
+
+const {readAuthData, verifyAuthData} = require("./middleware/authentication.js")
+
+serverInstance.use(readAuthData, verifyAuthData);
+
+
 const PokemonRouter = require("./routers/pokemonRouters")
 
 // Use to enable post requests (Raw JSON)
