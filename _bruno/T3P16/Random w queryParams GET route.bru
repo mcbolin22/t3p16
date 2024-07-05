@@ -5,7 +5,16 @@ meta {
 }
 
 get {
-  url: http://localhost:3000/pokemon/random
+  url: http://localhost:3000/pokemon/random?weather=rainy&breakfast=eggs
   body: none
-  auth: none
+  auth: bearer
+}
+
+params:query {
+  weather: rainy
+  breakfast: eggs
+}
+
+auth:bearer {
+  token: booboo
 }
