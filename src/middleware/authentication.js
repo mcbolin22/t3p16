@@ -29,7 +29,16 @@ function verifyAuthData(request, response, next){
     next();
 }
 
-module.exports = {readAuthData, verifyAuthData};
+async function exampleAsyncMiddleware(request, response, next){
+    console.log("Called from async middleware");
+    next();
+}
+
+module.exports = {
+    readAuthData, 
+    verifyAuthData, 
+    exampleAsyncMiddleware
+};
 
 /*
 
